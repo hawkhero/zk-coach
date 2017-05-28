@@ -1,0 +1,6 @@
+<zk>
+	<div viewModel="@id('vm')@init('zkcoach.mvvm.HelloVM')">
+		<label value="@load(vm.hello)"/>
+		<button label="hello world" onClick="@command('helloWorld')"></button>
+	</div>
+</zk>
