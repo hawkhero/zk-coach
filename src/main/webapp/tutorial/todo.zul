@@ -1,0 +1,42 @@
+<vlayout viewModel="@id('vm')@init('zkcoach.mvvm.tutorial.controller.TodoEditorViewModel')">
+	<hbox align="center" hflex="1">
+		<checkbox checked="@bind(vm.todo.complete)" />
+		<textbox value="@load(vm.todo.subject)@save(vm.todo.subject, before='save')@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" hflex="1" />
+	</hbox>
+	<grid hflex="1">
+		<columns>
+			<column align="right" hflex="min" />
+			<column />
+		</columns>
+		<rows>
+			<row>
+				<cell sclass="row-title">優先級 :</cell>
+				<cell>
+					<radiogroup model="@bind(vm.priorityList)"
+						selectedItem="@bind(vm.todo.priority)">
+						<template name="model">
+							<radio label="@init(each)" />
+						</template>
+					</radiogroup>
+				</cell>
+			</row>
+			<row>
+				<cell sclass="row-title">到期日 :</cell>
+				<cell>
+					<datebox value="@bind(vm.todo.date)" width="200px" />
+				</cell>
+			</row>
+			<row>
+				<cell sclass="row-title">細節 :</cell>
+				<cell>
+					<textbox value="@bind(vm.todo.description)"
+						multiline="true" hflex="1" height="200px" />
+				</cell>
+			</row>
+		</rows>
+	</grid>
+	<hlayout>
+		<button onClick="@global-command('navigate', page='todoList.zul')" label="返回" />
+		<button onClick="@command('save')" label="儲存" />
+	</hlayout>
+</vlayout>

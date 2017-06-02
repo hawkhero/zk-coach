@@ -1,0 +1,8 @@
+<?link rel="stylesheet" type="text/css" href="style.css"?>
+<window
+	viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.MyTodoListViewModel')"
+	border="normal" width="500px" vflex="1" contentStyle="overflow:auto" style="margin:auto">
+	<caption iconSclass="z-icon-list-ul" style="font-size:22px"
+		sclass="fn-caption" label="我的待辦清單" />
+	<apply templateURI="@load(vm.currentPage)"/>
+</window>

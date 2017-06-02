@@ -1,13 +1,8 @@
-/* 
-	Description:
-		ZK Essentials
-	History:
-		Created by dennis
-
-Copyright (C) 2012 Potix Corporation. All Rights Reserved.
-*/
 package zkcoach.mvvm.tutorial.service;
 
+/**
+ * 實作操作待辦事項清單的 CRUD 邏輯
+ */
 import java.util.*;
 
 import zkcoach.mvvm.tutorial.entity.Todo;
