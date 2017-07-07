@@ -1,0 +1,7 @@
+<zk>
+<!-- TODO 使用 viewModel, 綁定 hello, 綁定 helloWorld 命令 -->
+	<div >
+		<label />
+		<button label="hello world" ></button>
+	</div>
+</zk>
