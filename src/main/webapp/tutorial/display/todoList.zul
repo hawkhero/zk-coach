@@ -1,15 +1,6 @@
 <vlayout hflex="1" vflex="1"
 	viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.TodoListViewModel')">
-	<hlayout hflex="1" sclass="todo-box">
-		<textbox value="@save(vm.subject, before='addTodo')@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" onOK="@command('addTodo')"
-			hflex="1" placeholder="該做啥?" />
-		<button onClick="@command('addTodo')"
-			iconSclass="z-icon-plus-circle" width="40px"
-			style="font-size:18px;color:#116611" />
-	</hlayout>
-	<listbox model="@init(vm.todoListModel)"
-	onSelect="@command('edit') @global-command('navigate', page='todo.zul')"
-		selectedItem="@bind(vm.selectedTodo)" vflex="1">
+	<listbox model="@init(vm.todoListModel)" vflex="1">
 		<listhead>
 			<listheader width="30px" />
 			<listheader />

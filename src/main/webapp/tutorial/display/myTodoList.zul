@@ -3,5 +3,4 @@
 	border="normal" width="500px" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
 	<caption iconSclass="z-icon-list-ul" style="font-size:22px"
 		sclass="fn-caption" label="@init(vm.title)" />
-	<apply templateURI="@load(vm.currentPage)"/>
 </window>
