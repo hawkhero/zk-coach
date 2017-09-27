@@ -11,16 +11,15 @@ import zkcoach.mvvm.tutorial.entity.Todo;
  * @author hawk
  *
  */
-public class MyTodoListViewModel implements Serializable{
-	private static final long serialVersionUID = 1L;
-	
+public class MyTodoListViewModel {
+	private String title = "我的待辦清單";
 	private String currentPage = "todoList.zul";
-	
+
 	@GlobalCommand @NotifyChange("currentPage")
 	public void navigate(@BindingParam("page") String page, @BindingParam("todo") Todo todo){
 		currentPage = page;
 	}
-	
+
 	public String getCurrentPage() {
 		return currentPage;
 	}
@@ -28,5 +27,8 @@ public class MyTodoListViewModel implements Serializable{
 	public void setCurrentPage(String currentPage) {
 		this.currentPage = currentPage;
 	}
-	
+
+	public String getTitle() {
+		return title;
+	}
 }
