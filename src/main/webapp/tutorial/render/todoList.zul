@@ -8,17 +8,15 @@
 		</listhead>
 		<template name="model">
 			<listitem
-				sclass="@load(each.complete?'complete-todo':'')">
+				sclass="@init(each.complete?'complete-todo':'')">
 				<listcell>
-					<checkbox checked="@bind(each.complete)"
-						onCheck="@command('completeTodo',todo=each)" />
+					<checkbox checked="@init(each.complete)"/>
 				</listcell>
 				<listcell>
 					<label value="@init(each.subject)" />
 				</listcell>
 				<listcell>
-					<button onClick="@command('deleteTodo',todo=each)"
-						iconSclass="z-icon-times-circle" width="40px"
+					<button iconSclass="z-icon-times-circle" width="40px"
 						style="font-size:18px;color:#AA5585" />
 				</listcell>
 			</listitem>
