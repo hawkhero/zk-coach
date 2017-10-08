@@ -1,5 +1,5 @@
 .todo-window{
-    margin: 30px auto 30px auto;
+    margin: 0px auto 0px auto;
 }
 .z-label{
 	font-size: 14px;
@@ -20,4 +20,7 @@
 	font-weight: bold;
 	font-size: medium;
 	color: #636363;
+}
+.z-page{
+padding: 30px 0px 30px 0px;
 }

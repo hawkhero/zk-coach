@@ -1,7 +1,7 @@
 <?link rel="stylesheet" type="text/css" href="/tutorial/style.css"?>
 <window viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.MyTodoListViewModel')"
-	border="normal" width="500px" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
-	<caption iconSclass="z-icon-list-ul" style="font-size:22px"
+	border="normal" width="40%" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
+	<caption iconSclass="z-icon-list-ul" style="font-size:22px;"
 		sclass="fn-caption" label="@init(vm.title)" />
 	<apply templateURI="@load(vm.currentPage)"/>
 </window>
