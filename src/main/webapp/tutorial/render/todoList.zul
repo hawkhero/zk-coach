@@ -2,7 +2,7 @@
 	viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.TodoListViewModel')">
 	<listbox model="@init(vm.todoListModel)" vflex="1">
 		<listhead>
-			<listheader width="30px" />
+			<listheader  />
 			<listheader />
 			<listheader hflex="min" />
 		</listhead>
