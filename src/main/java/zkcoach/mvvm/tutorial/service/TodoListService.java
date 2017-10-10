@@ -11,24 +11,25 @@ import zkcoach.mvvm.tutorial.entity.Todo;
 public class TodoListService {
 
     static int todoId = 0;
-    static List<Todo> todoList = new ArrayList<Todo>();
+    static List<Todo> todoList = new ArrayList<Todo>(); //模擬後端資料庫查詢的結果
 
     static {
-        todoList.add(new Todo(todoId++, "寫一個待辦清單", 1, dayAfter(5), "$1,000"));
+        todoList.add(new Todo(todoId++, "寫一個待辦清單", 1, toadyAfter(5), "$1,000"));
         todoList.add(new Todo(todoId++, "看到賣西瓜的，就買一個", 2, null, null));
-        todoList.add(new Todo(todoId++, "女友說什麼就做什麼", 3, dayAfter(10), null));
+        todoList.add(new Todo(todoId++, "幫女友按摩", 3, toadyAfter(10), null));
     }
 
 
-    private static Date dayAfter(int d) {
+    /**
+     * @param d 天數
+     * @return 傳回一個今天之後幾天的日期
+     */
+    private static Date toadyAfter(int d) {
         Calendar c = Calendar.getInstance();
         c.add(Calendar.DATE, d);
         return c.getTime();
     }
 
-    /**
-     * synchronized is just because we use static userList in this demo to prevent concurrent access
-     **/
     public synchronized List<Todo> getTodoList() {
         List<Todo> list = new ArrayList<Todo>();
         for (Todo todo : todoList) {
@@ -37,9 +38,7 @@ public class TodoListService {
         return list;
     }
 
-    /**
-     * synchronized is just because we use static userList in this demo to prevent concurrent access
-     **/
+
     public synchronized Todo getTodo(Integer id) {
         int size = todoList.size();
         for (int i = 0; i < size; i++) {
@@ -52,7 +51,7 @@ public class TodoListService {
     }
 
     /**
-     * synchronized is just because we use static userList in this demo to prevent concurrent access
+     * 使用 synchronized 是為了避免多執行緒同時存取靜態變數 todoList 產生不一致的結果
      **/
     public synchronized Todo saveTodo(Todo todo) {
         todo = Todo.clone(todo);
@@ -61,9 +60,7 @@ public class TodoListService {
         return todo;
     }
 
-    /**
-     * synchronized is just because we use static userList in this demo to prevent concurrent access
-     **/
+
     public synchronized Todo updateTodo(Todo todo) {
         if (todo.getId() == null) {
             throw new IllegalArgumentException("cann't save a null-id todo, save it first");
@@ -81,9 +78,7 @@ public class TodoListService {
         }
     }
 
-    /**
-     * synchronized is just because we use static userList in this demo to prevent concurrent access
-     **/
+
     public synchronized void deleteTodo(Todo todo) {
         if (todo.getId() != null) {
             int size = todoList.size();
