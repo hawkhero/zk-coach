@@ -4,3 +4,6 @@
 /.project
 /.idea/
 *.iml
+/.gradle/
+/build/
+/gradle/
