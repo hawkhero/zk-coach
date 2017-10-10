@@ -1,4 +1,5 @@
 <?link rel="stylesheet" type="text/css" href="/tutorial/style.css"?>
-<window border="normal" width="500px" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
-	<caption iconSclass="z-icon-list-ul" style="font-size:22px" sclass="fn-caption" />
+<window border="normal" width="40%" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
+	<caption iconSclass="z-icon-list-ul" style="font-size:22px;"
+		sclass="fn-caption" />
 </window>
