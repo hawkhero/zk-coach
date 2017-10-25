@@ -38,13 +38,13 @@ public class TodoListViewModel {
     }
 
     /**
-     * 完成某個待辦事項
+     * 切換完成狀態
      *
      * @param todo
      */
     @Command
-    public void completeTodo(@BindingParam("todo") Todo todo) {
-        todo = todoListService.updateTodo(todo);
+    public void toggleComplete(@BindingParam("todo") Todo todo) {
+        todoListService.updateTodo(todo);
     }
 
     @Command

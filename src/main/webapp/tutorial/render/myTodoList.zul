@@ -3,4 +3,28 @@
 	border="normal" width="40%" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
 	<caption iconSclass="z-icon-list-ul" style="font-size:22px;"
 		sclass="fn-caption" label="@init(vm.title)" />
+	<vlayout hflex="1" vflex="1"
+			 viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.TodoListViewModel')">
+		<listbox model="@init(vm.todoListModel)" vflex="1">
+			<listhead>
+				<listheader hflex="min"/>
+				<listheader />
+				<listheader hflex="min" />
+			</listhead>
+			<template name="model">
+				<listitem
+						sclass="@init(each.complete?'complete-todo':'')">
+					<listcell>
+						<checkbox checked="@init(each.complete)" />
+					</listcell>
+					<listcell>
+						<label value="@init(each.subject)" />
+					</listcell>
+					<listcell>
+						<button iconSclass="z-icon-times-circle" style="color:#FFAAAA"/>
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+	</vlayout>
 </window>

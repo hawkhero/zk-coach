@@ -19,7 +19,7 @@
 				sclass="@load(each.complete?'complete-todo':'')">
 				<listcell>
 					<checkbox checked="@bind(each.complete)"
-						onCheck="@command('completeTodo',todo=each)" />
+						onCheck="@command('toggleComplete',todo=each)" />
 				</listcell>
 				<listcell>
 					<label value="@init(each.subject)" />
