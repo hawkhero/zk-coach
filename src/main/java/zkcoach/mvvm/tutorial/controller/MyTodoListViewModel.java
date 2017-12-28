@@ -16,7 +16,7 @@ public class MyTodoListViewModel {
 	private String currentPage = "todoList.zul";
 
 	@GlobalCommand @NotifyChange("currentPage")
-	public void navigate(@BindingParam("page") String page, @BindingParam("todo") Todo todo){
+	public void navigate(@BindingParam("page") String page){
 		currentPage = page;
 	}
 

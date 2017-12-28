@@ -34,7 +34,7 @@ public class TodoListViewModel {
         //更新頁面資料，無需用 @NotifyChange 通知 ZK 我們改變了 todoListModel，它自行會通知元件繪製新增的一筆
         todoListModel.add(selectedTodo);
         //清空輸入，方便輸入下一個事項
-        subject = null;
+        subject = "";
     }
 
     /**
@@ -53,6 +53,7 @@ public class TodoListViewModel {
         todoListService.deleteTodo(todo);
         //刪除畫面上的資料
         todoListModel.remove(todo);
+//        System.out.println("deleteTodo");
     }
 
     @Command
