@@ -1,6 +1,12 @@
 <zk>
-	<div viewModel="@id('vm')@init('zkcoach.mvvm.HelloVM')">
-		<label value="@load(vm.hello)"/>
-		<button label="hello world" onClick="@command('helloWorld')"></button>
+	<!-- TODO, 2-2, 使用 viewModel -->
+	<div
+	viewModel="@id('vm')@init('zkcoach.mvvm.HelloVM')">
+	<!-- TODO, 2-2, 綁定 hello-->
+		<label
+				value="@load(vm.hello)"/>
+	<!-- TODO, 2-2, 綁定 helloWorld 命令 -->
+		<button label="hello world"
+				onClick="@command('helloWorld')"/>
 	</div>
 </zk>

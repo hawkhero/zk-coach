@@ -11,7 +11,6 @@
 				<listheader />
 				<listheader hflex="min" />
 			</listhead>
-			<!-- TODO, 14, template 內需有 checkbox <- complete, label <- subject, button -->
 			<template name="model">
 				<listitem
 						sclass="@init(each.complete?'complete-todo':'')">
@@ -22,7 +21,8 @@
 						<label value="@init(each.subject)" />
 					</listcell>
 					<listcell>
-						<button iconSclass="z-icon-times-circle" style="color:#FFAAAA"/>
+						<!-- TODO, 2-2,  onClick 刪除 -->
+						<button iconSclass="z-icon-times-circle" style="color:#FFAAAA"
 					</listcell>
 				</listitem>
 			</template>

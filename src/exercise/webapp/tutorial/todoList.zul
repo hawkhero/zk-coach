@@ -2,15 +2,10 @@
 	viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.TodoListViewModel')">
 	<hlayout hflex="1" vflex="min" sclass="todo-box">
 		<!-- TODO, 2, textbox 輸入待辦主題 -->
-		<textbox value="@save(vm.subject, before='addTodo')@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" onOK="@command('addTodo')"
-			hflex="1" placeholder="該做啥?" />
 		<!-- TODO, 2, button 增加 todo -->
-		<button onClick="@command('addTodo')" hflex="min"
-			iconSclass="z-icon-plus-circle" style="color:#D4EE9F"/>
 	</hlayout>
 	<!-- TODO, 2-2, onSelect 上實作選一個事項就切換到編輯頁面 -->
 	<listbox model="@init(vm.todoListModel)"
-	onSelect="@command('edit') @global-command('navigate', page='todo.zul')"
 		selectedItem="@bind(vm.selectedTodo)" vflex="1">
 		<listhead>
 			<listheader hflex="min"/>
@@ -20,11 +15,9 @@
 		<template name="model">
 			<!-- TODO, 2-2, 根據 each.complete 屬性來決定是否套用 CSS class complete-todo -->
 			<listitem
-				sclass="@load(each.complete?'complete-todo':'')">
 				<listcell>
 				<!-- TODO, 2-2, onCheck 點了就「完成」此事項 -->
 					<checkbox checked="@bind(each.complete)"
-						onCheck="@command('toggleComplete',todo=each)" />
 				</listcell>
 				<listcell>
 					<label value="@init(each.subject)" />
@@ -32,7 +25,6 @@
 				<listcell>
 					<!-- TODO, 2-2, onClick 刪除 -->
 					<button iconSclass="z-icon-times-circle" style="color:#FFAAAA"
-							onClick="@command('deleteTodo',todo=each)"/>
 				</listcell>
 			</listitem>
 		</template>

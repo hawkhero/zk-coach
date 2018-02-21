@@ -3,7 +3,5 @@
 	border="normal" width="40%" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
 	<!-- TODO, 2-2, 初始化 title -->
 	<caption iconSclass="z-icon-list-ul" style="font-size:22px;" sclass="fn-caption"
-			 label="@init(vm.title)" />
 	<!-- TODO, 1, template injection - apply 綁定 currentPage -->
-	<apply templateURI="@load(vm.currentPage)"/>
 </window>

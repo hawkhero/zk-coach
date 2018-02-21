@@ -1,0 +1,17 @@
+<vlayout viewModel="@id('vm')@init('zkcoach.mvvm.tutorial.controller.TodoEditorViewModel')">
+	<hbox align="center" hflex="1">
+		<!-- TODO, 2, 放 checkbox, textbox 待辦事項-->
+	</hbox>
+	<grid hflex="1">
+		<columns>
+			<column align="right" hflex="min" />
+			<column />
+		</columns>
+		<rows>
+			<!-- TODO, 24,  編輯待辦事項-->
+		</rows>
+	</grid>
+	<hlayout>
+	<!-- TODO, 2, 返回與儲存按鈕  -->
+	</hlayout>
+</vlayout>

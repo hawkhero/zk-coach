@@ -1,6 +1,4 @@
 <?link rel="stylesheet" type="text/css" href="/tutorial/style.css"?>
 <window border="normal" width="40%" vflex="1" contentStyle="overflow:auto" sclass="todo-window">
 	<!-- TODO, 2, 設定 window 標題 (caption) 字型 22px 套用 fn-caption (css class) -->
-	<caption iconSclass="z-icon-list-ul" style="font-size:22px;"
-		sclass="fn-caption" />
 </window>

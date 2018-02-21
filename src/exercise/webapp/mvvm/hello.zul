@@ -1,7 +1,9 @@
 <zk>
-<!-- TODO 使用 viewModel, 綁定 hello, 綁定 helloWorld 命令 -->
-	<div >
-		<label />
-		<button label="hello world" ></button>
+	<!-- TODO, 2-2, 使用 viewModel -->
+	<div
+	<!-- TODO, 2-2, 綁定 hello-->
+		<label
+	<!-- TODO, 2-2, 綁定 helloWorld 命令 -->
+		<button label="hello world"
 	</div>
 </zk>

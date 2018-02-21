@@ -1,5 +1,6 @@
 <vlayout viewModel="@id('vm')@init('zkcoach.mvvm.tutorial.controller.TodoEditorViewModel')">
 	<hbox align="center" hflex="1">
+		<!-- TODO, 2, 放 checkbox, textbox 待辦事項-->
 		<checkbox checked="@bind(vm.todo.complete)" />
 		<textbox value="@load(vm.todo.subject)@save(vm.todo.subject, before='save')@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" hflex="1" />
 	</hbox>
@@ -9,6 +10,7 @@
 			<column />
 		</columns>
 		<rows>
+			<!-- TODO, 24,  編輯待辦事項-->
 			<row>
 				<cell sclass="row-title">優先級 :</cell>
 				<cell>
@@ -36,7 +38,8 @@
 		</rows>
 	</grid>
 	<hlayout>
+	<!-- TODO, 2, 返回與儲存按鈕  -->
 		<button onClick="@global-command('navigate', page='todoList.zul')" label="返回" />
-		<button onClick="@command('save')" label="儲存" />
+		<button onClick="@command('save') @global-command('navigate', page='todoList.zul')" label="儲存" />
 	</hlayout>
 </vlayout>
