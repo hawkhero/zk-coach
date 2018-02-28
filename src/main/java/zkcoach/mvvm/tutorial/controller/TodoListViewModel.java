@@ -30,9 +30,9 @@ public class TodoListViewModel {
     @Command //@Command 用來宣告此方法為命令 (command)
     @NotifyChange("subject") //@NotifyChange 通知 ZK 更新哪些 property
     public void addTodo() {
-        selectedTodo = todoListService.saveTodo(new Todo(subject));
+        Todo newTodo = todoListService.saveTodo(new Todo(subject));
         //更新頁面資料，無需用 @NotifyChange 通知 ZK 我們改變了 todoListModel，它自行會通知元件繪製新增的一筆
-        todoListModel.add(selectedTodo);
+        todoListModel.add(newTodo);
         //清空輸入，方便輸入下一個事項
         subject = "";
     }
