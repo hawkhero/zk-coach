@@ -2,7 +2,7 @@
 	viewModel="@id('vm') @init('zkcoach.mvvm.tutorial.controller.TodoListViewModel')">
 	<hlayout hflex="1" vflex="min" sclass="todo-box">
 		<!-- TODO, 2, textbox 輸入待辦主題 -->
-		<textbox value="@save(vm.subject, before='addTodo')@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" onOK="@command('addTodo')"
+		<textbox value="@save(vm.subject, before='addTodo')@load(vm.subject)@validator('zkcoach.mvvm.tutorial.controller.SubjectValidator')" onOK="@command('addTodo')"
 			hflex="1" placeholder="該做啥?" />
 		<!-- TODO, 2, button 增加 todo -->
 		<button onClick="@command('addTodo')" hflex="min"
