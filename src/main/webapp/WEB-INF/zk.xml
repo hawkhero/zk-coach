@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zk>
-	
+    <client-config>
+        <debug-js>true</debug-js>
+    </client-config>
+    <!-- 需要引入 theme pack 才有此 theme -->
+    <library-property>
+        <name>org.zkoss.theme.preferred</name>
+        <value>gardensalad</value>
+    </library-property>
 </zk>
