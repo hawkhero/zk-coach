@@ -32,7 +32,7 @@
 				<cell sclass="row-title">細節 :</cell>
 				<cell>
 					<textbox value="@bind(vm.todo.description)"
-						multiline="true" hflex="1" height="200px" />
+						multiline="true" hflex="1" rows="10" />
 				</cell>
 			</row>
 		</rows>
