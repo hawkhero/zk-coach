@@ -18,10 +18,6 @@ public class TodoEditorViewModel{
 	 * @param todo
 	 * TODO, 2-5, 定義一個 init method
 	 */
-	@Init
-	public void init(@ScopeParam("todo")Todo todo){
-		this.todo = todo;
-	}
 	
 	/**
 	 * 儲存編輯後的待辦事項

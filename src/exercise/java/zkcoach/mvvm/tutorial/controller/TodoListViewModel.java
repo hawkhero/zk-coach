@@ -28,41 +28,16 @@ public class TodoListViewModel {
     }
 
     //TODO, 10, 實作 addTodo command
-    @Command //@Command 用來宣告此方法為命令 (command)
-    @NotifyChange("subject") //@NotifyChange 通知 ZK 更新哪些 property
-    public void addTodo() {
-        Todo newTodo = todoListService.saveTodo(new Todo(subject));
-        //更新頁面資料，無需用 @NotifyChange 通知 ZK 我們改變了 todoListModel，它自行會通知元件繪製新增的一筆
-        todoListModel.add(newTodo);
-        //清空輸入，方便輸入下一個事項
-        subject = "";
-    }
-
     /**
      * 切換完成狀態
      *
      * @param todo
      * TODO, 2-5, 實作
      */
-    @Command
-    public void toggleComplete(@BindingParam("todo") Todo todo) {
-        todoListService.updateTodo(todo);
-    }
 
     //TODO, 7, 實作 deleteTodo
-    @Command
-    public void deleteTodo(@BindingParam("todo") Todo todo) {
-        //刪除後端資料
-        todoListService.deleteTodo(todo);
-        //刪除畫面上的資料
-        todoListModel.remove(todo);
-    }
 
     //TODO, 4, 實作 edit todo
-    @Command
-    public void edit(@ContextParam(ContextType.DESKTOP) Desktop desktop) {
-        desktop.setAttribute("todo", selectedTodo); //存入 desktop 讓編輯頁面存取
-    }
 
 
     //以下為 data binding 所需的 getter & setter

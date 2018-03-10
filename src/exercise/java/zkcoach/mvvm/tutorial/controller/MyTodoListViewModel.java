@@ -16,10 +16,6 @@ public class MyTodoListViewModel {
 	private String currentPage = "todoList.zul";
 
 	//TODO, 4, global command 接受 page 參數，設定 currentPage
-	@GlobalCommand @NotifyChange("currentPage")
-	public void navigate(@BindingParam("page") String page){
-		currentPage = page;
-	}
 
 	public String getCurrentPage() {
 		return currentPage;
