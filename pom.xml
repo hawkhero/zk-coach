@@ -5,8 +5,7 @@
 	<artifactId>zkcoach</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<zk.version>8.5.0-Eval</zk.version>
-		<commons-io>2.4</commons-io>
+		<zk.version>9.0.0-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -70,11 +69,6 @@
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zhtml</artifactId>
 			<version>${zk.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io}</version>
 		</dependency>
 		<!-- ZK EE 付費版 -->
 		<!--<dependency>-->
