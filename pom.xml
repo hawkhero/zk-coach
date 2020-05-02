@@ -96,7 +96,7 @@
 			<plugin>
 				<groupId>org.zkoss.training</groupId>
 				<artifactId>exercise-maker</artifactId>
-				<version>1.0</version>
+				<version>1.0.0</version>
 			</plugin>
             <!-- create the exercise project zip for training attendees
             https://maven.apache.org/plugins/maven-assembly-plugin/usage.html
