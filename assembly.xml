@@ -1,0 +1,33 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+	<id>exercise</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<fileSets>
+		<!-- include exercise files -->
+		<fileSet>
+			<directory>${project.basedir}/src/exercise</directory>
+			<outputDirectory>src/main</outputDirectory>
+			<includes>
+				<!-- includes all sub-directories -->
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}</directory>
+			<outputDirectory>/</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<excludes>
+				<exclude>**/*.log</exclude>
+				<exclude>**/${project.build.directory}/**</exclude>
+				<exclude>.settings/**</exclude>
+				<exclude>src/assembly/**</exclude>
+				<exclude>.**</exclude>
+				<exclude>src/exercise/</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+</assembly>
